@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::#content}, 'About Page', ~{::#script})}" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- About Page Content -->
+    <div id="content">
+        <h1>Welcome to the About Page</h1>
+        <p>This is the About Page where we talk about our application.</p>
+    </div>
+
+    <!-- About Page Specific Scripts -->
+    <div id="script">
+        <script>
+            console.log("About Page Script Loaded");
+        </script>
+    </div>
+</body>
+</html>
