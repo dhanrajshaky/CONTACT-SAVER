@@ -7,6 +7,7 @@ document.querySelector("html").classList.add(currentTheme); // Apply the theme t
 function changeTheme() {
     // Set to button
     const changeThemeButton = document.querySelector("#theme_change_button");
+   
     if (changeThemeButton) {
         changeThemeButton.addEventListener("click", (event) => {
             const oldTheme = currentTheme;
@@ -21,14 +22,9 @@ function changeTheme() {
             document.querySelector("html").classList.remove(oldTheme);
             // add new theme
             document.querySelector("html").classList.add(currentTheme);
-
-            // Change the button text
-            if (currentTheme === "dark") {
-                changeThemeButton.textContent = "Light";
-            } else {
-                changeThemeButton.textContent = "Dark";
-            }
-
+ 
+            changeThemeButton.querySelector("span").textContent = currentTheme == "dark" ? "Light" : "Dark";
+            
            
         });
     } else {
