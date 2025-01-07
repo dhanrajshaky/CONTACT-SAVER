@@ -46,11 +46,17 @@ public class homecontroller {
         return new String("login");
     }
 
-    @GetMapping("register")
+    @GetMapping("/register")
     public String register() {
         return new String("register");
     }
-    
+
+    @RequestMapping(value = "/do-register",method = RequestMethod.POST)
+    public String processRegister(){
+        System.out.println("hello dhanraj");
+        return "redirect:/register";
+    }
+
 
     
 }
